@@ -10,16 +10,18 @@ const { Content} = Layout;
 
 
 const MainLayout: React.FC = () => {
-  // const {
-  //   token: {borderRadiusLG }
-  // } = theme.useToken();
 
   return (
     <ConfigProvider
       theme={{
         token: {
           
-          // colorPrimary: "#fdd05e",
+          colorPrimary: "#8edla3",
+          colorLink:"blue",
+          colorTextBase:"#8edla3",
+          motion:false,
+          
+          
 
           //content area
           // colorBgBase:'#fff9f4',

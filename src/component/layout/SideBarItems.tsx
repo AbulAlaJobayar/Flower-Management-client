@@ -1,91 +1,48 @@
 import { NavLink } from "react-router-dom";
 import { HiOutlineViewGrid } from "react-icons/hi";
+import { MdAddShoppingCart } from "react-icons/md";
+import { TbShoppingBagEdit } from "react-icons/tb";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FaRegUser } from "react-icons/fa6";
+import { IoIosLogOut } from "react-icons/io";
+import { IoHomeOutline } from "react-icons/io5";
 export const SidebarItems = [
+  {
+    key: "home",
+    icon:<IoHomeOutline /> ,
+    label: <NavLink to="/" > <span className="secondaryFont text-base">Home</span></NavLink>,
+  },
   {
     key: "dashboard",
     icon:<HiOutlineViewGrid /> ,
-    label: <NavLink to="/" > <span className="secondaryFont text-base">Dashboard</span></NavLink>,
+    label: <NavLink to="/dashboard" > <span className="secondaryFont text-base">Dashboard</span></NavLink>,
   },
   {
-    key: "dashboard",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-5 h-5"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
-        />
-      </svg>
-    ),
-    label: <NavLink to="/" > <span className="primaryFont text-base">Dashboard</span></NavLink>,
+    key: "addProduct",
+    icon:<MdAddShoppingCart />,
+    label: <NavLink to="/addProduct" > <span className="secondaryFont text-base">Add Product</span></NavLink>,
   },
   {
-    key: "dashboard",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-5 h-5"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
-        />
-      </svg>
-    ),
-    label: <NavLink to="/" > <span className="primaryFont text-base">Dashboard</span></NavLink>,
+    key: "manageProduct",
+    icon:<TbShoppingBagEdit />,
+    label: <NavLink to="/manageProduct" > <span className="secondaryFont text-base">Manage Product</span></NavLink>,
   },
   {
-    key: "dashboard",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-5 h-5"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
-        />
-      </svg>
-    ),
-    label: <NavLink to="/" > <span className="primaryFont text-base">Dashboard</span></NavLink>,
+    key: "order",
+    icon:<AiOutlineShoppingCart />,
+    label: <NavLink to="/order" > <span className="secondaryFont text-base">Order</span></NavLink>,
   },
   {
-    key: "dashboard",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-5 h-5"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
-        />
-      </svg>
-    ),
-    label: <NavLink to="/" > <span className="primaryFont text-base">Dashboard</span></NavLink>,
+    key: "profile",
+    icon:<FaRegUser />,
+    label: <NavLink to="/profile" > <span className="secondaryFont text-base">Profile</span></NavLink>,
   },
+  {
+    key: "logOut",
+    icon:<IoIosLogOut />,
+    label: <NavLink to="/" > <span className="secondaryFont text-base">Logout</span></NavLink>,
+  },
+  
 
 ];
 // export const items=sidebarItems.map((item)=>SideBarItemsProp(item.key,item.icon))
