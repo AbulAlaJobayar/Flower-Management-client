@@ -1,11 +1,15 @@
-import Card from "./Card";
+import Footer from "../../component/Footer/Footer";
+import Navbar from "../../component/navbar/NavBar";
 
 const Home = () => {
   return (
-    <div className="mx-4">
-        <h1 className=" text-2xl font-semibold secondaryFont pt-4 pb-2 text-textColor">Welcome Back !</h1>
-        <p className=" text-base text-textColor primaryFont">Hello Jobayar, shop some our newest flower </p>
-      <Card/>
+    <div className="container mx-auto">
+      <Navbar />
+      <div className="bg-secondary">
+
+      </div>
+      <h1>hello home</h1>
+      <Footer />
     </div>
   );
 };

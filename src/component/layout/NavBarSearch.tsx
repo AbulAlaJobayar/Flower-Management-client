@@ -31,7 +31,7 @@ const NavBarSearch = () => {
           placeholder="input search text"
           allowClear
           onSearch={onSearch}
-          className="xl:w-[400px] md:w-[300px] sm:w-[200px]"
+          className="xl:w-[400px] md:w-[300px] w-[100px]"
         />
       </div>
     </ConfigProvider>

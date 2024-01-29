@@ -8,18 +8,26 @@ import AddProduct from "../pages/addProduct/AddProduct";
 import ManageProduct from "../pages/manageProduct/ManageProduct";
 import Order from "../pages/order/Order";
 const router = createBrowserRouter([
+{
+  path:'/',
+  element:<Home/>,
+  children:[
+    {
+      path:"/",
+      element:<Home></Home>
+    }
+  ]
+},
+
   {
     path: "/",
     element: <App />,
     children:[
         {
-            path:"/",
-            element:<Home/> 
-        },
-        {
-            path:"/dashboard",
+            path:"dashboard",
             element:<Dashboard/> 
         },
+      
         {
             path:"/addProduct",
             element:<AddProduct/>

@@ -5,7 +5,7 @@ import { UserOutlined } from '@ant-design/icons'
 const user=""
 const NavbarIcon = () => {
   return (
-    <div className="flex justify-center items-center  gap-5 mb-9">
+    <div className="flex justify-center items-center  gap-5 pb-5">
       <BsCartCheck className="size-5 text-[#333333]"/>
       <IoIosNotificationsOutline className="size-6 text-[#333333]"/>
       <div className="size-12 border border-[#fbc8a4] rounded-full">

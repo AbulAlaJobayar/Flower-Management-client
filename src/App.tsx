@@ -1,9 +1,9 @@
 import MainLayout from "./component/layout/MainLayout";
-
 const App = () => {
   return (
-    <div>
+    <div className="max-h-[100vh]">
      <MainLayout/>
+     {/* <CustomLayout/> */}
   </div>
   );
 };

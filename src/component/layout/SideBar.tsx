@@ -11,7 +11,7 @@ const SideBar = () => {
     
       breakpoint="lg"
       collapsedWidth="0"
-      style={{ backgroundColor: "#8ed1a3", color: "#fdd05e" }}
+      style={{ backgroundColor: "#8ed1a3", color: "#fdd05e ",height:"100vh" }}
      
     >
         <NavLink to="/">
