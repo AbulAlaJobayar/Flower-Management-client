@@ -4,7 +4,9 @@ import { AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import NavbarIcon from "../layout/NavbarIcon";
 import NavBarSearch from "../layout/NavBarSearch";
+
 const Navbar = () => {
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [
     { href: "/", label: "Home" },
@@ -39,7 +41,7 @@ const Navbar = () => {
               <NavBarSearch />
             </div>
             <div className="pt-5 -pb-10 hidden md:block">
-              <NavbarIcon />
+              <NavbarIcon/>
             </div>
           </div>
           <div
