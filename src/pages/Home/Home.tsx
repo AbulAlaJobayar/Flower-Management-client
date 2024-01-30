@@ -1,19 +1,26 @@
+import { Key } from "react";
 import Footer from "../../component/Footer/Footer";
 import Navbar from "../../component/navbar/NavBar";
 import { useGetAllProductQuery } from "../../redux/fetchurs/getAllproductApi";
+import Card from "./Card";
+import HeroSection from "./heroSection";
 
 const Home = () => {
-  const { data, error, isLoading }=useGetAllProductQuery('')
-  if(isLoading){
-    return <div>looding...</div>
+  const { data, isLoading } = useGetAllProductQuery("");
+  if (isLoading) {
+    return <div>looding...</div>;
   }
-  console.log(data)
+  console.log(data);
   return (
     <div className="container mx-auto">
       <Navbar />
       <div className="bg-[#fff9f4]">
-
-      <h1>hello home</h1>
+        <HeroSection />
+        <div className=" mx-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 ">
+          {data?.data.map((item: any, i: any) => (
+            <Card key={i} item={item} />
+          ))}
+        </div>
       </div>
       <Footer />
     </div>

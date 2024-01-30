@@ -4,15 +4,21 @@ import { AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import NavbarIcon from "../layout/NavbarIcon";
 import NavBarSearch from "../layout/NavBarSearch";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { logout, selectCurrentUser } from "../../redux/fetchurs/auth/authSlice";
 
 const Navbar = () => {
-  
+  const user = useAppSelector(selectCurrentUser)
+  console.log(user)
+  const dispatch=useAppDispatch()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/dashboard", label: "Dashboard" },
-    { href: "#products", label: "Login" },
   ];
+  const handleLogout=()=>{
+    dispatch(logout())
+  }
   return (
     <>
       <header className="sm:px-8 px-4  z-10 w-full bg-primary">
@@ -35,13 +41,18 @@ const Navbar = () => {
                 <NavLink to={item.href}>{item.label}</NavLink>
               </li>
             ))}
+            {user ? (
+              <button onClick={handleLogout}>logOut</button>
+            ) : (
+              <NavLink to="/login">Login</NavLink>
+            )}
           </ul>
           <div className="gap-2 flex justify-between items-center">
             <div>
               <NavBarSearch />
             </div>
             <div className="pt-5 -pb-10 hidden md:block">
-              <NavbarIcon/>
+              <NavbarIcon />
             </div>
           </div>
           <div
@@ -73,6 +84,11 @@ const Navbar = () => {
                   <NavLink to={item.href}>{item.label}</NavLink>
                 </li>
               ))}
+              {user ? (
+                <button onClick={handleLogout}>logOut</button>
+              ) : (
+                <NavLink to="/login">Login</NavLink>
+              )}
             </ul>
           </nav>
         </div>
