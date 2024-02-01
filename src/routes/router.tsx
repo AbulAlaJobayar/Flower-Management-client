@@ -7,52 +7,57 @@ import Home from "../pages/Home/Home";
 import AddProduct from "../pages/addProduct/AddProduct";
 import ManageProduct from "../pages/manageProduct/ManageProduct";
 import Order from "../pages/order/Order";
+import Profile from "../pages/Profile/Profile";
 const router = createBrowserRouter([
-{
-  path:'/',
-  element:<Home/>,
-  children:[
-    {
-      path:"/",
-      element:<Home></Home>
-    }
-  ]
-},
+  // {
+  //   path: "/",
+  //   element: <Home />,
+  //   children: [
+  //     {
+  //       path: "/",
+  //       element: <Home></Home>,
+  //     },
+  //   ],
+  // },
 
   {
     path: "/",
     element: <App />,
-    children:[
-        {
-            path:"dashboard",
-            element:<Dashboard/> 
-        },
-      
-        {
-            path:"/addProduct",
-            element:<AddProduct/>
-        },
-        {
-            path:"/manageProduct",
-            element:<ManageProduct/>
-        },
-        {
-            path:"/order",
-            element:<Order/>
-        },
-        {
-            path:"/profile",
-            element:<ManageProduct/>
-        },
-    ]
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "dashboard",
+        element: <Dashboard />,
+      },
+
+      {
+        path: "/addProduct",
+        element: <AddProduct />,
+      },
+      {
+        path: "/manageProduct",
+        element: <ManageProduct />,
+      },
+      {
+        path: "/order",
+        element: <Order />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
+    ],
   },
   {
-    path:"/login",
-    element:<Login/>
+    path: "/login",
+    element: <Login />,
   },
   {
-    path:"/signup",
-    element:<Register/>
-  }
+    path: "/signup",
+    element: <Register />,
+  },
 ]);
 export default router;

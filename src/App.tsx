@@ -1,10 +1,13 @@
+import ProtectedRoute from "./component/ProtectedRoute";
 import MainLayout from "./component/layout/MainLayout";
 const App = () => {
   return (
     <div className="max-h-[100vh]">
-     <MainLayout/>
-     {/* <CustomLayout/> */}
-  </div>
+      <ProtectedRoute>
+        <MainLayout />
+      </ProtectedRoute>
+      {/* <CustomLayout/> */}
+    </div>
   );
 };
 

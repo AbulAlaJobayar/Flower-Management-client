@@ -7,7 +7,7 @@ const getSingleProductApi = baseApi.injectEndpoints({
                 url: `/product/${id}`,
                 method: 'GET'
             }),
-            providesTags:['singleProduct'] as any
+            
         })
     })
 })

@@ -1,16 +1,26 @@
+import { selectCurrentUser } from "../../redux/fetchurs/auth/authSlice";
+import { useAppSelector } from "../../redux/hooks";
+import DashboardCard from "./DashboardCard";
+
 const Dashboard = () => {
+  const user = useAppSelector(selectCurrentUser);
   return (
     <div className="mx-4">
-      <h1 className=" text-2xl font-semibold secondaryyFont pt-4 pb-2 text-textColor">
+      <div className=" text-center">
+        <h1 className=" text-2xl font-semibold secondaryyFont pt-4 pb-2 text-textColor">
+          Hello, {user?.name} !
+        </h1>
+        <p className=" text-base text-textColor  primaryyFont">
+          Here your Store Seeling performance
+        </p>
+      </div>
+      {/* <h1 className=" text-2xl font-semibold secondaryyFont pt-4 pb-2 text-textColor">
         Welcome Back !
       </h1>
       <p className=" text-base text-textColor  primaryyFont">
         Hello Jobayar, shop some our newest flower{" "}
-      </p>
-      {/* <div className=" w-full ">
-          <img  src="https://i.ibb.co/7tY6vtd/frontpage.jpg" alt="" />
-        <span className="w-44 h-20 bg-red"></span>
-        </div> */}
+      </p> */}
+      <DashboardCard />
     </div>
   );
 };
