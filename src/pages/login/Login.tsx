@@ -25,9 +25,9 @@ const Login = () => {
       style: {
         color: "#8ed1a3",
       },
-      duration:2000,
+      duration: 2000,
     });
-    setLoading(true)
+    setLoading(true);
     try {
       const res: any = await data(loginInfo);
       console.log(res.data.data);
@@ -42,7 +42,10 @@ const Login = () => {
       setLoading(false);
       navigate("/");
     } catch (err) {
-      toast.error("something went wrong. please check your Email and Password", { id: toastId, duration: 2000 })
+      toast.error(
+        "something went wrong. please check your Email and Password",
+        { id: toastId, duration: 2000 }
+      );
     }
   };
 
@@ -71,7 +74,7 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 placeholder="Enter Your Email Here"
-                className="w-full px-3 py-2 border rounded-md border-accent focus:outline-primary bg-gray-200 text-textColor"
+                className="w-full px-3 py-2 border rounded-md border-accent focus:outline-primaryy bg-gray-200 text-textColor"
                 data-temp-mail-org="0"
               />
             </div>
@@ -88,7 +91,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 placeholder="*******"
-                className="w-full px-3 py-2 border rounded-md border-accent focus:outline-primary  text-textColor"
+                className="w-full px-3 py-2 border rounded-md border-accent focus:outline-primaryy  text-textColor"
               />
             </div>
           </div>
@@ -96,7 +99,7 @@ const Login = () => {
           <div>
             <button
               type="submit"
-              className="bg-primary text-textColor w-full rounded-md py-3 primaryFont "
+              className="bg-primaryy text-textColor w-full rounded-md py-3 primaryyFont "
             >
               {loading ? (
                 <TbFidgetSpinner className="m-auto animate-spin" size={24} />

@@ -8,20 +8,20 @@ import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { logout, selectCurrentUser } from "../../redux/fetchurs/auth/authSlice";
 
 const Navbar = () => {
-  const user = useAppSelector(selectCurrentUser)
-  console.log(user)
-  const dispatch=useAppDispatch()
+  const user = useAppSelector(selectCurrentUser);
+  console.log(user);
+  const dispatch = useAppDispatch();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/dashboard", label: "Dashboard" },
   ];
-  const handleLogout=()=>{
-    dispatch(logout())
-  }
+  const handleLogout = () => {
+    dispatch(logout());
+  };
   return (
     <>
-      <header className="sm:px-8 px-4  z-10 w-full bg-primary">
+      <header className="sm:px-8 px-4  z-10 w-full bg-primaryy">
         <nav className="flex justify-between items-center max-container">
           <NavLink to="/">
             <div className="mx-auto text-center  flex justify-center items-center">
@@ -35,7 +35,7 @@ const Navbar = () => {
               </span>
             </div>
           </NavLink>
-          <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden text-textColor font-base secondaryFont">
+          <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden text-textColor font-base secondaryyFont">
             {navLinks.map((item) => (
               <li key={item.label}>
                 <NavLink to={item.href}>{item.label}</NavLink>
@@ -71,14 +71,14 @@ const Navbar = () => {
       </header>
       {isMenuOpen && (
         <div className="">
-          <nav className="fixed top-20  right-0 bottom-0 lg:bottom-auto bg-primary  ">
+          <nav className="fixed top-20  right-0 bottom-0 lg:bottom-auto bg-primaryy  ">
             <div
               className="hidden max-lg:block fixed right-0  px-8 py-4 cursor-pointer"
               onClick={() => {
                 setIsMenuOpen(!isMenuOpen);
               }}
             ></div>
-            <ul className=" lg:hidden flex flex-col px-4 text-base secondaryFont text-textColor text-left h-full ">
+            <ul className=" lg:hidden flex flex-col px-4 text-base secondaryyFont text-textColor text-left h-full ">
               {navLinks.map((item) => (
                 <li key={item.label}>
                   <NavLink to={item.href}>{item.label}</NavLink>

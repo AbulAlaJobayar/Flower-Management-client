@@ -15,9 +15,19 @@ import { SlSizeActual } from "react-icons/sl";
 //   updatedAt:Date;
 //   _id:string;
 // }
-const Card: React.FC = ({ item }: any) => {
+type TCard={
+  key:any;
+  item:any
+}
+const Card: React.FC<TCard> = ({ item }: any) => {
+ 
+ 
+ 
+ const handleOrder=(id)=>{
+  console.log(id)
+ }
   return (
-    <div className="block mt-4 rounded-lg mb-4 shadow-sm shadow-primary bg-primary">
+    <div className="block mt-4 rounded-lg mb-4 shadow-sm shadow-primaryy bg-primaryy">
       <img
         alt="Home"
         src={item.image}
@@ -62,7 +72,9 @@ const Card: React.FC = ({ item }: any) => {
           </div>
         </div>
       </div>
-      <button className="w-full bg-secondary font-semibold text-textColor mt-4 py-3 rounded-md">Order Now</button>
+      <button onClick={()=>handleOrder(item._id)} className="w-full bg-secondaryy font-semibold text-textColor mt-4 py-3 rounded-md">
+        Order Now
+      </button>
     </div>
   );
 };

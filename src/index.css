@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.primaryFont{
-    font-family: "Open Sans", sans-serif;
+.primaryyFont {
+  font-family: "Open Sans", sans-serif;
 }
 
-.secondaryFont{
-    font-family: "Playfair Display", serif;
+.secondaryyFont {
+  font-family: "Playfair Display", serif;
 }
-.accentFont{
-    font-family: "Dancing Script", cursive;
+.accentFont {
+  font-family: "Dancing Script", cursive;
 }
 /* .ant-typography a:active,
 .ant-typography a:focus {

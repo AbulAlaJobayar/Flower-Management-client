@@ -6,7 +6,8 @@ const getAllProductApi = baseApi.injectEndpoints({
             query: () => ({
                 url: '/product/get-flower',
                 method: 'GET'
-            })
+            }),
+            providesTags:['product'] as any
         })
     })
 })

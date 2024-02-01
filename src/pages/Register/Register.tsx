@@ -7,7 +7,7 @@ import { toast } from "sonner";
 
 const Register = () => {
   const [loading, setLoading] = useState(false);
-const navigate=useNavigate()
+  const navigate = useNavigate();
   const [data] = useSignupMutation();
   const handleSubmit = async (event: any) => {
     event.preventDefault();
@@ -42,9 +42,12 @@ const navigate=useNavigate()
         position: "top-center",
       });
       setLoading(false);
-      navigate('/login')
+      navigate("/login");
     } catch (error) {
-      toast.error("something went wrong. please change your email", { id: toastId, duration: 2000 })
+      toast.error("something went wrong. please change your email", {
+        id: toastId,
+        duration: 2000,
+      });
     }
   };
   return (
@@ -70,7 +73,7 @@ const navigate=useNavigate()
                 name="name"
                 id="name"
                 placeholder="Enter Your Name Here"
-                className="w-full px-3 py-2 border rounded-md border-secondary focus:outline-accent bg-gray-200 text-textColor"
+                className="w-full px-3 py-2 border rounded-md border-secondaryy focus:outline-accent bg-gray-200 text-textColor"
                 data-temp-mail-org="0"
               />
             </div>
@@ -79,7 +82,7 @@ const navigate=useNavigate()
                 Select Image:
               </label>
               <input
-                className=" rounded-md border-secondary focus:outline-accent bg-gray-200 text-textColor"
+                className=" rounded-md border-secondaryy focus:outline-accent bg-gray-200 text-textColor"
                 required
                 type="file"
                 id="image"
@@ -97,7 +100,7 @@ const navigate=useNavigate()
                 id="email"
                 required
                 placeholder="Enter Your Email Here"
-                className="w-full px-3 py-2 border rounded-md border-secondary focus:outline-accent bg-gray-200 text-textColor"
+                className="w-full px-3 py-2 border rounded-md border-secondaryy focus:outline-accent bg-gray-200 text-textColor"
                 data-temp-mail-org="0"
               />
             </div>
@@ -113,7 +116,7 @@ const navigate=useNavigate()
                 id="password"
                 required
                 placeholder="*******"
-                className="w-full px-3 py-2 border rounded-md border-secondary focus:outline-accent bg-gray-200 text-textColor"
+                className="w-full px-3 py-2 border rounded-md border-secondaryy focus:outline-accent bg-gray-200 text-textColor"
               />
             </div>
           </div>
@@ -121,7 +124,7 @@ const navigate=useNavigate()
           <div>
             <button
               type="submit"
-              className="bg-primary w-full rounded-md py-3 text-white"
+              className="bg-primaryy w-full rounded-md py-3 text-white"
             >
               {loading ? (
                 <TbFidgetSpinner className="m-auto animate-spin" size={24} />
