@@ -4,18 +4,7 @@ import { IoMdColorPalette } from "react-icons/io";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { SlSizeActual } from "react-icons/sl";
 import OrderModal from "./order/OrdarModal";
-//  type TItem={
-//   category: string;
-//   color: string
-//   createdAt: Date;
-//   fragrance: string;
-//   name: string;
-//   price: number;
-// quantity: number;
-//   size: string;
-//   updatedAt:Date;
-//   _id:string;
-// }
+
 type TCard = {
   key: any;
   item: any;

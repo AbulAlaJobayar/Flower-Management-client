@@ -11,7 +11,7 @@ const MainLayout: React.FC = () => {
     <ConfigProvider
       theme={{
         token: {
-          colorprimaryy: "#8edla3",
+          colorPrimary: "#8edla3",
           colorLink: "blue",
           colorTextBase: "#8edla3",
           motion: false,
@@ -25,7 +25,7 @@ const MainLayout: React.FC = () => {
     >
       <Layout
         className="container mx-auto"
-        style={{ height: "100vh", width: "100%" }}
+        style={{ height: "fit-content", width: "100%" }}
       >
         <SideBar />
 

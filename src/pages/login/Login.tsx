@@ -45,7 +45,9 @@ const Login = () => {
       toast.error(
         "something went wrong. please check your Email and Password",
         { id: toastId, duration: 2000 }
+        
       );
+      setLoading(false);
     }
   };
 

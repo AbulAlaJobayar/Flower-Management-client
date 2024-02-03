@@ -2,9 +2,14 @@ import { useGetAllProductQuery } from "../../redux/fetchurs/getAllproductApi";
 import ManageSingleProduct from "./ManageSingleProduct";
 
 const ManageProduct = () => {
-  const { data, isLoading } = useGetAllProductQuery("");
- console.log(isLoading)
+  const { data} = useGetAllProductQuery("");
+ 
   console.log(data)
+
+
+
+
+
  return (
     <div className="overflow-x-auto overflow-y-auto">
       <table className="table">
@@ -24,8 +29,9 @@ const ManageProduct = () => {
         </thead>
         
         <tbody>
-          {data?.data.map((item:any, i:any) => (
-            <ManageSingleProduct
+          {data?.data?.map((item:any, i:any) => (
+        
+           <ManageSingleProduct
               key={item._id}
               i={i}
               item={item}

@@ -2,6 +2,7 @@ import { toast } from "sonner";
 import { useRemoveProductMutation } from "../../redux/fetchurs/removeSingleProduct";
 import EditModal from "./EditModal";
 import { useState } from "react";
+import DuplicateModal from "./duplicate/DuplicateModal";
 
 
 
@@ -9,6 +10,7 @@ const ManageSingleProduct: React.FC<any> = ({ i, item }) => {
  
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editId, setEditId]=useState('')
+  const [duplicate,setDuplicate]=useState(false)
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -36,6 +38,12 @@ const handleEdit=(id:any)=>{
   setEditId(id)
   showModal()
   };
+
+
+ const  handleDuplicate=(id:any)=>{
+  setEditId(id)
+  setDuplicate(true)
+ }
   return (
     <>
       <tr>
@@ -73,12 +81,27 @@ const handleEdit=(id:any)=>{
             className="  bg-primaryy py-2 px-4 rounded text-base hover:bg-[#4fedb1] "
           >
          Edit
-          </button>
+        </button>
+        </td>
+        <td>
+        
+        <button
+            onClick={() =>handleDuplicate(item._id)}
+            className="  bg-primaryy py-2 px-4 rounded text-base hover:bg-[#4fedb1] "
+          >
+         Duplicate
+        </button>
         </td>
       </tr>
       <EditModal
       isModalOpen={isModalOpen}
       setIsModalOpen={setIsModalOpen}
+      editId={editId}
+
+      />
+      <DuplicateModal
+      isModalOpen={duplicate}
+      setIsModalOpen={setDuplicate}
       editId={editId}
 
       />

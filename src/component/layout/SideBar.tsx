@@ -13,7 +13,7 @@ import { useAppDispatch } from "../../redux/hooks";
 import { logout } from "../../redux/fetchurs/auth/authSlice";
 
 const SideBar = () => {
-  const dispatch=useAppDispatch()
+  const dispatch:any=useAppDispatch()
   const handleLogout = () => {
     dispatch(logout());
 
@@ -97,7 +97,7 @@ const SideBar = () => {
     
       breakpoint="lg"
       collapsedWidth="0"
-      style={{ backgroundColor: "#8ed1a3", color: "#fdd05e ",height:"100vh" }}
+      style={{ backgroundColor: "#8ed1a3", color: "#fdd05e ", minHeight: "100vh" }}
      
     >
         <NavLink to="/">

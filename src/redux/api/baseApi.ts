@@ -6,7 +6,7 @@ import { logout, setUser } from "../fetchurs/auth/authSlice";
 
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'http://localhost:5000/api/v1',
+    baseUrl: 'https://flowermanagemant.vercel.app/api/v1',
     credentials: 'include',
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).auth.token;
@@ -30,7 +30,7 @@ const baseQuery = fetchBaseQuery({
       //* Send Refresh
       console.log('Sending refresh token');
   
-      const res = await fetch('http://localhost:5000/api/v1/user/refresh-token', {
+      const res = await fetch('https://flowermanagemant.vercel.app/api/v1/user/refresh-token', {
         method: 'POST',
         credentials: 'include',
       });
@@ -62,8 +62,3 @@ const baseQuery = fetchBaseQuery({
     endpoints: () => ({}),
   });
 
-// export const baseApi = createApi({
-//     reducerPath: 'baseApi',
-//     baseQuery: baseQueryWithRefereesToken,
-//     endpoints: () => ({})
-// })
